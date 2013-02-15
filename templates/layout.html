@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Pirata+One' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+
+    <style type="text/css">
+      h1 {
+        font-size: 3em;
+        padding-bottom: 15px;
+      }
+      body{
+        background-image: url('/static/img/bg.png');
+        margin: 60px 80px 80px 80px;
+        font-size: 1.5em;
+        line-height: 1.8em;
+        font-family: 'Pirata One', cursive;
+      }
+      li {
+        line-height: 1.8em;
+      }
+      #footer{
+        padding-top: 150px;
+        font-size: 0.8em;
+      }
+    </style>
+    <title>{% block title %}{% endblock %} - eBooks!</title>
+    {% endblock %}
+  </head>
+<body>
+  <div id="content">{% block content %}{% endblock %}</div>
+  <div id="footer">
+    {% block footer %}
+      2013 <a target="_blank" href="http://github.com/chrisbutcher">Christopher Butcher</a>. All books are subject to the conditions of the <a target="_blank" href="http://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License">Project Gutenberg License</a>.
+    {% endblock %}
+  </div>
+</body>

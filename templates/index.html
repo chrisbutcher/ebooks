@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}All books{% endblock %}
+{% block content %}
+<h1>eBooks!</h1>
+
+<ul>
+{% for author in authors %}
+	{% for book in author.books %}
+  <li>{{ book.title }} by <a href="/author/{{book.author_id}}">{{ book.author }}</a> [<a href="/static/books/{{ book.file_txt_url }}">.txt</a>]</li>
+  {% endfor %}
+{% endfor %}
+</ul>
+{% endblock %}

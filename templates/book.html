@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+<h1>{{ book.title }} by <a href="/author/{{book.author_id}}">{{ book.author.name }}</a></h1>
+
+Download: [<a href="/static/books/{{book.file_txt_url}}">txt</a>]
+
+<br/>
+<a href="/">Back to all books</a>
+{% endblock %}
